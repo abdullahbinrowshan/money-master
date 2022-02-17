@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Money Master</title>
+    <title>Monthly Accounts</title>
     <!-- row css -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- tailwindcss -->
@@ -13,16 +13,25 @@
 </head>
 
 <body>
+    <!-- Header start -->
     <header>
         <h1 class="md:text-4xl text-3xl text-center text-green-600 my-5 font-bold" title="of poor people">Monthly
             Accounts</h1>
     </header>
+    <!-- Header end -->
+
     <main class="container mx-auto">
         <article class="grid grid-cols-1 lg:grid-cols-2 md:mx-10">
+            <!-- Requirement picture -->
+
             <section class="lg:mb-16">
                 <img class="w-2/2 xl:w-5/6" src="./images/zakat2.png" />
             </section>
+
+
+    <!----- Income Expenses Saving start  ----->
             <section class="bg-gray-100  lg:mb-16 md:w-4/5 mt-3 lg:mt-0 md:ml-10">
+                <!-- Monthly accounting start -->
                 <div class="grid justify-items-center">
                     <h2 class="font-semibold my-8">Income</h2>
                     <p class="text-sm text-right">Income:
@@ -31,6 +40,7 @@
 
                     <h2 class="font-semibold my-4">Expenses</h2>
 
+                    <!-- expenses input start -->
                     <p class="text-sm mb-2 text-right">Food:
                         <input class="bg-gray-300 p-1" type="text" id="food-input">
                     </p>
@@ -40,31 +50,47 @@
                     <p class="text-sm mb-2 text-right">Clothes:
                         <input class="bg-gray-300 p-1" type="text" id="clothes-input">
                     </p>
+                    <!-- expenses input end -->
+
+                    <!-- Expenses errors start -->
                     <div>
                         <p class="hidden-errors text-red-600 text-xs mb-2 font-bold" id="pls-put-num">Your value type must be number</p>
                         <p class="hidden-errors text-red-600  text-xs mb-2 font-bold" id="put-positive-num">Please input a positive number</p>
                         <p class="hidden-errors text-red-600  text-xs mb-2 font-bold" id="more-than-income">You have spent more than your income</p>
                     </div>
-                    <button class="bg-green-400 py-1 px-8 mt-2 text-white font-semibold rounded"
-                        id="calculate-btn">Calculate</button>
+                    <!-- Expenses errors start -->
+
+                    <button class="bg-green-400 py-1 px-8 mt-2 text-white font-semibold rounded" id="calculate-btn">Calculate</button>
 
                     <h2 class="font-semibold mt-3">Total Expenses: <span id="expenses-total">00</span></h2>
                     <h2 class="font-semibold mt-3">Balance: <span id="balance-total">00</span></h2>
                 </div>
+                <!-- Monthly accounting end -->
 
+
+                <!-- Saving account start -->
                 <div class="grid justify-items-center mt-3">
+                    
+                    <!-- Saving percentage input and button end  -->
                     <p class="text-sm mt-4">Save:
                         <input class="bg-gray-300 w-16 py-1 pl-5" type="text" value="0" id="saving-input"> %
                         <button class="bg-green-400 py-1 px-4 text-white font-semibold rounded"
                             id="save-btn">Save</button>
                     </p>
+                    <!-- Saving percentage input and button end  -->
+
+                    <!-- saving errors start -->
                     <div>
                         <p class="text-red-600 hidden-errors text-xs mb-2 font-bold" id="havent-enough-balance">There is not enough balance to save</p>
                     </div>
+                    <!-- saving errors end -->
+
                     <h2 class="font-semibold mt-3">Saving Amount: <span id="saved-money">00</span></h2>
                     <h2 class="font-semibold mt-3">Remaining Balance: <span id="remaining-balance">00</span></h2>
                 </div>
+                <!-- Saving account end -->
             </section>
+            <!-- Income Expenses Saving start  -->
         </article>
     </main>
     <script src="./js/app.js"></script>
